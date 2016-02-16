@@ -12,7 +12,9 @@ class Example extends React.Component {
     // headerImage support string and number
     return (
       <View style={styles.container}>
-        <NavigationBar/>
+        <NavigationBar
+          actionName='Submit'
+        />
       </View>
     )
   }
