@@ -1,6 +1,6 @@
 {
   "name": "react-native-navigationbar",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "author": "poberWong",
   "main": "lib/index.js",
   "description": "navigationbar provided for navigator",
