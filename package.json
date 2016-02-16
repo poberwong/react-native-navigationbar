@@ -2,9 +2,11 @@
   "name": "react-native-navigationbar",
   "version": "0.1.1",
   "author": "poberWong",
-  "main": "index.js",
+  "main": "lib/index.js",
   "description": "navigationbar provided for navigator",
-
+  "files": [
+    "lib"
+  ],
   "bugs": {
   	"url": "https://github.com/Bob1993/react-native-navigationbar",
   	"email": "poberwong@gmail.com"
