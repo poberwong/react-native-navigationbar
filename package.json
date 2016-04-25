@@ -1,6 +1,6 @@
 {
   "name": "react-native-navigationbar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "poberWong",
   "main": "lib/index.js",
   "description": "navigationbar provided for navigator",
@@ -8,8 +8,12 @@
     "lib"
   ],
   "bugs": {
-  	"url": "https://github.com/Bob1993/react-native-navigationbar",
+  	"url": "https://github.com/Bob1993/react-native-navigationbar/issues",
   	"email": "poberwong@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bob1993/react-native-navigationbar"
   },
   "license": "MIT",
   
