@@ -70,9 +70,9 @@ export default class extends React.Component {
               {
                 this.props.backIcon
                 ? <View style={[styles.icon, {borderColor: this.props.backColor}]} />
-                : <Text style={[styles.backName, {color: this.props.backColor}]}>{this.props.backName}</Text>
               }
             </TouchableOpacity> : null
+              <Text style={[styles.backName, {color: this.props.backColor}]} numberOfLines={1}>{this.props.backName}</Text>
         }
         <View style={styles.titleWrapper}>
           <Text style={[styles.title, {color: this.props.titleTextColor}]} numberOfLines={1}>{this.props.title}</Text>
@@ -80,7 +80,7 @@ export default class extends React.Component {
         {
           this.props.actionName
           ? <TouchableOpacity style={styles.actionWrapper} onPress={this.props.actionFunc.bind(this)}>
-              <Text style={[styles.actionName, { color: this.props.actionTextColor }]}>{this.props.actionName}</Text>
+              <Text style={[styles.actionName, { color: this.props.actionTextColor }]} numberOfLines={1}>{this.props.actionName}</Text>
             </TouchableOpacity>
           : null
         }
