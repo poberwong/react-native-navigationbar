@@ -18,7 +18,8 @@ class Example extends Component {
     return (
       <View style={styles.container}>
         <NavigationBar
-          actionName='Next'
+          backName='back'
+          backHidden={true}
           title='爱普云'
         />
       </View>

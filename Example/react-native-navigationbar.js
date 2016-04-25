@@ -19,11 +19,11 @@ export default class extends React.Component {
     actionFunc: PropTypes.func,
     actionTextColor: PropTypes.string,
     backHidden: PropTypes.bool,
+    backIconHidden: PropTypes.bool,
     statusbarPadding: PropTypes.bool,
     backColor: PropTypes.string,
     barBottomColor: PropTypes.string,
     barBottomThickness: PropTypes.number,
-    backIcon: PropTypes.bool,
     backName: PropTypes.string,
     barOpacity: PropTypes.number,
     barStyle: PropTypes.number // add extended style for navigationBar
@@ -36,12 +36,10 @@ export default class extends React.Component {
     backColor: '#777',
     titleTextColor: '#333',
     barTintColor: 'white',
-    actionName: '',
     actionFunc () {},
     actionTextColor: '#666',
+    backIconHidden: false,
     backHidden: false, // 控制是否出现左侧菜单
-    backIcon: true, // 控制是选择icon还是text
-    backName: 'back',
     backTextColor: '#666',
     statusbarPadding: true,
     barBottomColor: '#d4d4d4',
@@ -67,12 +65,11 @@ export default class extends React.Component {
           ? <TouchableOpacity
               style={styles.backWrapper}
               onPress={this.props.backFunc}>
-              {
-                this.props.backIcon
+              { this.props.backIconHidden 
                 ? <View style={[styles.icon, {borderColor: this.props.backColor}]} />
-              }
-            </TouchableOpacity> : null
+                : null}
               <Text style={[styles.backName, {color: this.props.backColor}]} numberOfLines={1}>{this.props.backName}</Text>
+            </TouchableOpacity> : <View style={styles.backWrapper}/>
         }
         <View style={styles.titleWrapper}>
           <Text style={[styles.title, {color: this.props.titleTextColor}]} numberOfLines={1}>{this.props.title}</Text>
@@ -82,7 +79,7 @@ export default class extends React.Component {
           ? <TouchableOpacity style={styles.actionWrapper} onPress={this.props.actionFunc.bind(this)}>
               <Text style={[styles.actionName, { color: this.props.actionTextColor }]} numberOfLines={1}>{this.props.actionName}</Text>
             </TouchableOpacity>
-          : null
+          : <View style={styles.actionWrapper}/>
         }
       </View>
     )

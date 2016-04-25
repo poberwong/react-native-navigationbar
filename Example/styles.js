@@ -9,7 +9,8 @@ module.exports = React.StyleSheet.create({
   },
 
   backWrapper: {
-    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
     flex: 1
   },
 
@@ -44,6 +45,7 @@ module.exports = React.StyleSheet.create({
   },
 
   backName: {
-    fontSize: 17
+    fontSize: 17,
+    marginLeft: 8
   }
 })
