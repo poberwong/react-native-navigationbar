@@ -11,7 +11,7 @@ import React, {
   Text,
   View
 } from 'react-native';
-import NavigationBar from './react-native-navigationbar'
+import NavigationBar from 'react-native-navigationbar'
 
 class Example extends Component {
   render() {
