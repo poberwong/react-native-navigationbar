@@ -1,6 +1,6 @@
 {
   "name": "react-native-navigationbar",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "author": "poberWong",
   "main": "lib/index.js",
   "description": "navigationbar provided for navigator",
@@ -16,7 +16,9 @@
     "url": "https://github.com/Bob1993/react-native-navigationbar"
   },
   "license": "MIT",
-  
+  "dependencies": {
+    "react-native-device-info": "^0.9.1"
+  },
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "eslint": "^1.10.3",
