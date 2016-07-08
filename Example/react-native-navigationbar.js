@@ -67,7 +67,7 @@ export default class extends React.Component {
         {
           !this.props.backHidden
           ? <View
-              style={styles.leftWrapper}>
+              style={[styles.leftWrapper, {flex: this.props.actionArray.length || 1}]}>
               <TouchableOpacity onPress={this.props.backFunc} style={styles.backWrapper}>
                 {
                   !this.props.backIconHidden
