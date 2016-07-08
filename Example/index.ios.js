@@ -3,15 +3,14 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
-import React, {
+import React, { Component } from 'react'
+import {
   AppRegistry,
-  Component,
   StyleSheet,
   Text,
   View
 } from 'react-native';
-import NavigationBar from 'react-native-navigationbar'
+import NavigationBar from './react-native-navigationbar'
 
 class Example extends Component {
   render() {
@@ -19,7 +18,6 @@ class Example extends Component {
       <View style={styles.container}>
         <NavigationBar
           backName='back'
-          backHidden={true}
           title='爱普云'
         />
       </View>
