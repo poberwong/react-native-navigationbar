@@ -8,8 +8,7 @@ module.exports = React.StyleSheet.create({
     flexDirection: 'row'
   },
 
-  backWrapper: {
-    alignItems: 'center',
+  leftWrapper: {
     flexDirection: 'row',
     flex: 1
   },
@@ -23,9 +22,19 @@ module.exports = React.StyleSheet.create({
     transform: [{rotate: '45deg'}]
   },
 
+  backWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+
+  action: {
+    marginLeft: 8,
+    justifyContent: 'center'
+  },
+
   titleWrapper: {
     justifyContent: 'center',
-    flex: 2
+    flex: 1
   },
 
   title: {
@@ -45,7 +54,6 @@ module.exports = React.StyleSheet.create({
   },
 
   backName: {
-    fontSize: 17,
-    marginLeft: 8
+    fontSize: 17
   }
 })

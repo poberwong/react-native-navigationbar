@@ -11,6 +11,7 @@ export default class extends React.Component {
   static propTypes = {
     title: PropTypes.string,
     backFunc: PropTypes.func,
+    actionArray: PropTypes.array.isRequired,
     tintColor: PropTypes.string,
     titleTextColor: PropTypes.string,
     barTintColor: PropTypes.string,
@@ -32,6 +33,7 @@ export default class extends React.Component {
   static defaultProps = { // 返回默认的一些属性值
     title: 'title',
     backFunc () {},
+    actionArray: [],
     tintColor: '#777',
     backColor: '#777',
     titleTextColor: '#333',
@@ -64,16 +66,22 @@ export default class extends React.Component {
       }>
         {
           !this.props.backHidden
-          ? <TouchableOpacity
-              style={styles.backWrapper}
-              onPress={this.props.backFunc}>
+          ? <View
+              style={styles.leftWrapper}>
+              <TouchableOpacity onPress={this.props.backFunc} style={styles.backWrapper}>
+                {
+                  !this.props.backIconHidden
+                  ? <View style={[styles.icon, {borderColor: this.props.backColor}]} />
+                  : null
+                }
+                <Text style={[styles.backName, {color: this.props.backColor}]} numberOfLines={1}>{this.props.backName}</Text>
+              </TouchableOpacity>
               {
-                !this.props.backIconHidden
-                ? <View style={[styles.icon, {borderColor: this.props.backColor}]} />
-                : null
+                this.props.actionArray.map((action, index) => <TouchableOpacity key={index} onPress={action.onPress} style={styles.action}>
+                  <Text style={[styles.backName, {color: action.color}]}>{action.title}</Text>
+                </TouchableOpacity>)
               }
-              <Text style={[styles.backName, {color: this.props.backColor}]} numberOfLines={1}>{this.props.backName}</Text>
-            </TouchableOpacity> : <View style={styles.backWrapper}/>
+            </View> : <View style={styles.leftWrapper}/>
         }
         <View style={styles.titleWrapper}>
           <Text style={[styles.title, {color: this.props.titleTextColor}]} numberOfLines={1}>{this.props.title}</Text>
