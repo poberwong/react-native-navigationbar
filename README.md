@@ -5,6 +5,24 @@
 `npm install react-native-navigationbar --save`  
 
 ## Usage
+```
+import React, { Component } from 'react'
+import { View } from 'react-native';
+import NavigationBar from 'react-native-navigationbar'
 
+class Example extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <NavigationBar
+          backName='back'
+          title='爱普云'
+          ...
+        />
+      </View>
+    );
+  }
+}
+```
 Please go to the [demo](https://github.com/Bob1993/react-native-navigationbar/blob/master/Example/index.ios.js) in project  
 **Dont worry, it's very easy to use. If you want to know more, please view the [source code of lib](https://github.com/Bob1993/react-native-navigationbar/blob/master/lib/index.js)**
