@@ -19,6 +19,7 @@ class Example extends Component {
         <NavigationBar
           backName='back'
           title='爱普云'
+          actionArray={[{title: 'close', onPress: () => console.log('close')}]}
         />
       </View>
     );
