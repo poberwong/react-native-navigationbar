@@ -27,7 +27,8 @@ export default class extends React.Component {
     barBottomThickness: PropTypes.number,
     backName: PropTypes.string,
     barOpacity: PropTypes.number,
-    barStyle: PropTypes.number // add extended style for navigationBar
+    barStyle: PropTypes.number, // add extended style for navigationBar
+    searchBox: PropTypes.node,
   };
 
   static defaultProps = { // 返回默认的一些属性值
@@ -67,7 +68,7 @@ export default class extends React.Component {
         {
           !this.props.backHidden
           ? <View
-              style={[styles.leftWrapper, {flex: this.props.actionArray.length || 1}]}>
+              style={[styles.leftWrapper, {flex: this.props.actionArray.length || -1}]}>
               <TouchableOpacity onPress={this.props.backFunc} style={styles.backWrapper}>
                 {
                   !this.props.backIconHidden
@@ -84,7 +85,11 @@ export default class extends React.Component {
             </View> : <View style={styles.leftWrapper}/>
         }
         <View style={styles.titleWrapper}>
-          <Text style={[styles.title, {color: this.props.titleTextColor}]} numberOfLines={1}>{this.props.title}</Text>
+          {
+            !this.props.searchBox
+            ? <Text style={[styles.title, {color: this.props.titleTextColor}]} numberOfLines={1}>{this.props.title}</Text> :
+              React.cloneElement(this.props.searchBox)
+          }
         </View>
         {
           this.props.actionName
