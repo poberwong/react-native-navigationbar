@@ -1,5 +1,13 @@
 # react-native-navigationbar
-一个为 iOS/Android 提供Navigationbar的库
+a universal navigationbar for `navigator`. 
+
+## Feature  
+* support immerse statusbar when in landscape mode on iOS
+* support translucent statusbar above android 5.0+
+* support custom view for left and right parts of navigationbar
+
+## TODO
+review and reconstruct code to promote quality of code
 
 ## Install 
 `npm install react-native-navigationbar --save`  
