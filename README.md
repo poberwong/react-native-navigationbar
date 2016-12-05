@@ -6,7 +6,7 @@ a universal navigationbar for `navigator`.
 * support translucent statusbar above android 5.0+
 * support custom view for left and right parts of navigationbar
 
-## TODO
+## Todo
 review and reconstruct code to promote quality of code
 
 ## Install 
@@ -33,7 +33,7 @@ class Example extends Component {
 }
 ```
 
-## Props:
+## Props
 
  Name | Description | Default | Type
 ------|-------------|----------|-----------
@@ -52,5 +52,6 @@ backColor | color of back-part | `#777` | string
 backName | text of back-part |  | string
 barOpacity | opacity of bar | `1` | number
 barStyle | you can add external for bar |  | View.propTypes.style
+
 ## License  
 *MIT*
